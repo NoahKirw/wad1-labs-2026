@@ -7,26 +7,29 @@
     More information about the app
   </p>
 
-
-<div class="ui centered card">
-  <div class="image">
-    <img src="{{emps.image}}">
+  <div class="ui three stackable cards">
+    {{#each emps}}
+      <div class="card">
+        <div class="image">
+          <img src="{{this.image}}" alt="{{this.fullname}}">
+        </div>
+        <div class="content">
+          <a class="header">{{this.fullname}}</a>
+          <div class="meta">
+            <span class="date">Joined in {{this.joined}}</span>
+          </div>
+          <div class="description">
+            {{this.name}} is a {{this.job}} living in {{this.city}}.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            {{this.mates}} contacts
+          </a>
+        </div>
+      </div>
+    {{/each}}
   </div>
-  <div class="content">
-    <a class="header">{{emps.fullname}}</a>
-    <div class="meta">
-      <span class="date">Joined in {{emps.joined}}</span>
-    </div>
-    <div class="description">
-      {{emps.name}} is an {{emps.job}} living in {{emps.city}}.
-    </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      {{emps.mates}} contacts
-    </a>
-  </div>
-</div>
 
 </section>

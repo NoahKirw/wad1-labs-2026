@@ -8,7 +8,7 @@ const about = {
    
       const viewData = {
       title: "Playlist App About",
-      emps: empStore.getEmpInfo()
+      emps: empStore.getAllEmployees()
     };
     logger.info(viewData.emps)
     response.render('about', viewData); 
