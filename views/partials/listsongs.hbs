@@ -1,20 +1,27 @@
-{{#if singlePlaylist.songs}}
+{{#if songs}}
 
   <table class="ui unstackable striped table">
     <thead>
       <tr>
         <th>Song</th>
         <th>Artist</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      {{#each singlePlaylist.songs}}
+      {{#each songs}}
         <tr>
           <td>
-            {{title}}
+            {{ title}}
           </td>
           <td>
             {{artist}}
+          </td>
+           <td class="center aligned">
+            <a href="/playlist/{{../id}}/deletesong/{{id}}" 
+			        title="Delete song">
+              <i class="ui black trash icon"></i>
+            </a>
           </td>
         </tr>
       {{/each}}

@@ -15,7 +15,29 @@ const playlistStore = {
 
   getPlaylist(id) {
     return this.store.findOneBy(this.collection, (playlist => playlist.id === id));
-  }
+  },
+  
+  addSong(id, song) {
+    this.store.addItem(this.collection, id, this.array, song);
+  },
+
+  addPlaylist(playlist) {
+    this.store.addCollection(this.collection, playlist);
+  },
+
+  deleteSong(request, response) {
+      const playlistId = request.params.id;
+      const songId = request.params.songid;
+      logger.debug(`Deleting Song  $(songId} from Playlist ${playlistId}`);
+      playlistStore.removeSong(playlistId, songId);
+      response.redirect('/playlist/' + playlistId);
+  },
+
+  removePlaylist(id) {
+    const playlist = this.getPlaylist(id);
+    this.store.removeCollection(this.collection, playlist);
+  },
+
 
 };
 

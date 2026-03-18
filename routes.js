@@ -15,6 +15,14 @@ router.get('/playlists', dashboard.createView);
 router.get('/about', about.createView);
 router.get('/playlist/:id', playlist.createView);
 router.get('/playlists', dashboard.createView);
+router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
+router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+
+
+
+router.post('/playlist/:id/addsong', playlist.addSong);
+router.post('/dashboard/addplaylist', dashboard.addPlaylist);
+
 
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));
 
