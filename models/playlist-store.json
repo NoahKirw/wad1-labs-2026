@@ -3,6 +3,7 @@
     {
       "id" : "01",
       "title": "Beethoven Sonatas",
+      "rating": 5,
       "songs": [
         {
           "id" : "04",
@@ -24,6 +25,7 @@
     {
       "id" : "02",
       "title": "Beethoven Concertos",
+      "rating": 4,  
       "songs": [
         {
           "id" : "07",
@@ -45,6 +47,7 @@
     {
       "id" : "03",
       "title": "Beethoven Unfinished Symphonies",
+      "rating": 3,
       "songs": []
     }
   ]
