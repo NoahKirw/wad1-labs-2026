@@ -1,14 +1,16 @@
 "use strict";
 import logger from "../utils/logger.js";
 import playlistStore from "../models/playlist-store.js";
+import userStore from "../models/user-store.js";
 
 const stats = {
   createView(request, response) {
     logger.info("Stats page loading!");
-    // app statistics calculations
     const playlists = playlistStore.getAllPlaylists();
+    const users = userStore.getAllUsers();
 
     let numPlaylists = playlists.length;
+    let numUsers = users.length;
     
     let numSongs = playlists.reduce((total, playlist) => total + playlist.songs.length, 0);
 	
@@ -24,6 +26,7 @@ const stats = {
     const statistics = {
         displayNumPlaylists: numPlaylists,
         displayNumSongs: numSongs,
+        displayNumUsers: numUsers,
         displayAverage: average,
         displayAvgRating: avgRating.toFixed(2),
             highest: maxRating,
