@@ -12,3 +12,22 @@ body {
   margin: 2em;
   background-color: lightgrey;
 }
+
+.name{
+  padding-top:22.5px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+table {
+  margin:auto
+}

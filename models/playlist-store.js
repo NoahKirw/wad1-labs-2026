@@ -17,13 +17,18 @@ const playlistStore = {
     return this.store.findOneBy(this.collection, (playlist => playlist.id === id));
   },
   
-  addSong(id, song) {
-    this.store.addItem(this.collection, id, this.array, song);
+  async addSong(id, song) {
+    await this.store.addItem(this.collection, id, this.array, song);
   },
 
-  addPlaylist(playlist) {
-    this.store.addCollection(this.collection, playlist);
+  async removeSong(id, songId) {
+    await this.store.removeItem(this.collection, id, this.array, songId);
   },
+
+  async addPlaylist(playlist) {
+    await this.store.addCollection(this.collection, playlist);
+  },
+
 
   deleteSong(request, response) {
       const playlistId = request.params.id;
@@ -37,6 +42,22 @@ const playlistStore = {
     const playlist = this.getPlaylist(id);
     this.store.removeCollection(this.collection, playlist);
   },
+
+  getUserPlaylists(userid) {
+    return this.store.findBy(this.collection, (playlist => playlist.userid === userid));
+  },
+
+  searchUserPlaylists(search, userid) {
+    return this.store.findBy(
+      this.collection,
+      (playlist => playlist.userid === userid && playlist.title.toLowerCase().includes(search.toLowerCase())))
+  }, 
+
+  searchPlaylist(search) {
+    return this.store.findBy(
+      this.collection,
+      (playlist => playlist.title.toLowerCase().includes(search.toLowerCase())))
+  }
 
 
 };

@@ -1,53 +1,48 @@
 {
   "playlistCollection": [
     {
-      "id" : "01",
-      "title": "Beethoven Sonatas",
-      "rating": 5,
+      "id": "b20079d7-5c92-4da9-8e71-e581295a2287",
+      "title": "music",
+      "date": "2026-04-15T13:48:21.028Z",
+      "songs": []
+    },
+    {
+      "id": "4f07bec1-b619-4e43-818b-67245f7523ab",
+      "title": "music",
+      "date": "2026-04-15T13:48:25.091Z",
+      "songs": []
+    },
+    {
+      "id": "ea1dd032-ef34-48e1-8f2d-865d27777df0",
+      "title": "music",
+      "date": "2026-04-15T13:48:53.693Z",
+      "songs": []
+    },
+    {
+      "userid": "161e2f31-96fb-4f09-a2a4-f323f07d4f7e",
+      "id": "9a58f25d-7b8c-42ca-a5cb-45e87d76eeaa",
+      "title": "p",
+      "date": "2026-04-15T13:49:38.811Z",
       "songs": [
         {
-          "id" : "04",
-          "title": "Piano Sonata No. 3",
-          "artist": "Beethoven"
-        },
-        {
-          "id" : "05",
-          "title": "Piano Sonata No. 7",
-          "artist": "Beethoven"
-        },
-        {
-          "id" : "06",
-          "title": "Piano Sonata No. 10",
-          "artist": "Beethoven"
+          "id": "217cf78c-c50e-4685-abd5-6d7aa20cfc93",
+          "title": "thug",
+          "artist": "the thug"
         }
       ]
     },
     {
-      "id" : "02",
-      "title": "Beethoven Concertos",
-      "rating": 4,  
-      "songs": [
-        {
-          "id" : "07",
-          "title": "Piano Concerto No. 0",
-          "artist": "Beethoven"
-        },
-        {
-          "id" : "08",
-          "title": "Piano Concerto No. 4",
-          "artist": "Beethoven"
-        },
-        {
-          "id" : "09",
-          "title": "Piano Concerto No. 6",
-          "artist": "Beethoven"
-        }
-      ]
+      "userid": "161e2f31-96fb-4f09-a2a4-f323f07d4f7e",
+      "id": "a8422746-e57a-408f-8e9a-be00736986a3",
+      "title": "ert",
+      "date": "2026-04-15T13:54:55.775Z",
+      "songs": []
     },
     {
-      "id" : "03",
-      "title": "Beethoven Unfinished Symphonies",
-      "rating": 3,
+      "userid": "161e2f31-96fb-4f09-a2a4-f323f07d4f7e",
+      "id": "a8d397bb-bd19-4138-93ee-e5d25672d427",
+      "title": "ert",
+      "date": "2026-04-15T13:54:57.738Z",
       "songs": []
     }
   ]
