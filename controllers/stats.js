@@ -12,7 +12,6 @@ const stats = {
     if (loggedInUser) {
       logger.info("Stats page loading!");
 
-      // app statistics calculations
       const playlists = playlistStore.getAllPlaylists();
 
       let numPlaylists = playlists.length;
@@ -33,11 +32,15 @@ const stats = {
       let longestPlaylists = playlists.filter(playlist => playlist.songs.length === longestSize);
       let longestPlaylistTitles = longestPlaylists.map(item => item.title);
       
+      const users = userStore.getAllUsers();
+      let numUsers = users.length;
+
       const statistics = {
         displayNumPlaylists: numPlaylists,
         displayNumSongs: numSongs,
+        displayNumUsers: numUsers,
         displayAverage: average,
-        displayAvgRating: avgRating,
+        displayAvgRating: avgRating.toFixed(2),
         highest: maxRating,
         displayFav: favTitles,
         longest: longestSize,
