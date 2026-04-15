@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [
     "node",
@@ -15,7 +15,7 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "node": "^3.1.11"
+    "nodemon": "^3.1.11"
   },
   "dependencies": {
     "body-parser": "^2.2.2",
