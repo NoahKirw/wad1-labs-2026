@@ -34,6 +34,20 @@
       "email": "mrnoahkirwan@gmail.com",
       "password": "noahk",
       "id": "294baa70-a659-41ca-b13f-2a2198c9f8cc"
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@gmail.com",
+      "password": "asdf",
+      "id": "8e0eed2a-b65e-440b-849c-e3da4ea0b25e"
+    },
+    {
+      "firstName": "asdfqewr",
+      "lastName": "asdfqwer",
+      "email": "asdff",
+      "password": "asdff",
+      "id": "74802e58-1fb8-4a0f-a478-894571e448d8"
     }
   ]
 }

@@ -10,15 +10,18 @@ import accounts from './accounts.js';
 const playlist = {
   createView(request, response) {
     const playlistId = request.params.id;
-    logger.debug(`Playlist id = ${playlistId}`);
+    const loggedInUser = accounts.getCurrentUser(request);
+    logger.debug('Playlist id = ' + playlistId);
     
     const viewData = {
       title: 'Playlist',
-      singlePlaylist: playlistStore.getPlaylist(playlistId)
+      singlePlaylist: playlistStore.getPlaylist(playlistId),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
 
     response.render('playlist', viewData);
-  },
+},
+
 
   async addSong(request, response) {
     const playlistId = request.params.id;
